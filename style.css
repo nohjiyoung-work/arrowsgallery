@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+.body {
+  background: #fff;
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.info {
+  position: fixed;
+  display: flex;
+  top: 15px;
+  right: 40px;
+  font-size: 3rem;         /* 적절한 크기 */
+  color: rgb(255, 245, 131);
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  animation: moveRightThenBack 2.5s ease-in-out infinite;
+}
+
+@keyframes moveRightThenBack {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(30px);
+    animation-timing-function: ease-out; /* 오른쪽으로 천천히 */
+  }
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-in;  /* 빠르게 돌아옴 */
+  }
+}
+
+.info img {
+  width: 100px;         /* 원하는 크기로 조정 가능 */
+  height: 100px;
+  object-fit: contain;
+  display: block;
+}
+  
+  /* Grid Layout */
+.arrow-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+  
+.arrow {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+}
+
+/* 모바일 (950px 이하)에서는 active 또는 focus 시 나타나도록 */
+@media (max-width: 950px) {
+  .arrow-grid {
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr)); /* 최소 2열 */
+  }
+  .info:active,
+  .info:focus {
+    opacity: 1!important;
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>arrow gallery</title>
+  <link rel="icon" href="arrow-icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" integrity="sha512-VT0cSdcwb8W83Y1xCO9FUFoAgvlFYzOdCwP3guXdxVCbyw1M2Dt7KsMPsDvk35rWK9tO6ZErbVZqBf0Wg3DPiw==" crossorigin="anonymous" />
+  <style>
+    .body {
+    background-color: black;
+    color: white; /* 기본 텍스트 색상 */
+    margin: 0;
+    padding: 20px;
+  }
+
+  .code-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  pre, code {
+    font-family: "Space Mono", monospace;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    color: white !important; /* Prism 테마 무시하고 흰색으로 고정 */
+  }
+
+  /* Prism 테마 안에서 특정 색상도 덮어쓸 수 있음 */
+  code[class*="language-"],
+  pre[class*="language-"] {
+    color: white !important;
+  }
+  </style>
+</head>
+<body style="background-color: black;">
+    <pre>
+        collected by jiyoungnoh
+    </pre>
+  
+    <!-- Prism JS (문법 강조 라이브러리) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-OLK9W4/KwCvg1XIP9qR09RTPR3pLaOjpFK9Y++kj4bGN/f71OrdrU5z2XqiNqSGKXPCwqz3SVM4C5rB3gxxnSQ==" crossorigin="anonymous"></script>
+  </body>
+  </html>
